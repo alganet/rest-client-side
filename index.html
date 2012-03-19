@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Rest Client Side</title>
+    <meta name="description" content="Rest da perspectiva do cliente" />
+    <meta name="author" content="Alexandre Gaigalas" />
+    <meta name="author" content="Augusto Pascutti" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/prettify.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <style type="text/css">
+        h1 {
+            text-align: center;
+            font-size: 1.5em;
+            color: green;
+        }
+        .key h1 {
+            font-size 2em;
+            margin-top: 20%;
+
+        }
+        .front h1 {
+            text-align: left;
+            font-size: 3em;
+        }
+        .front h2 {
+            margin-top: 0.5em;
+            font-size: 1.5em;
+        }
+        .authors h1 {
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+        }
+        .authors p {
+            text-align: center;
+        }
+        .slide.alert {
+            background: yellow;
+            font-weight: bold;
+            font-size: 300px;
+            text-align: center;
+            line-height: 200%;
+        }
+        ul {
+            margin: 1em 0 0 0;
+        }
+        ul li {
+            text-indent: 1em;
+            list-style: disc inside;
+        }
+        code {
+            font-family: 'Ubuntu Mono';
+        }
+    </style>
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Seu navegador não suporta os requisitos mínimos para utilizar o impress.js!</p>
+</div>
+<div id="impress">
+    <div id="rest" class="step slide key front" data-x="0" data-y="0">
+        <h1>Rest Client Side</h1>
+        <h2>17 de Março, sampa.js</h2>
+    </div>
+        <div id="rest-me" class="step slide authors" data-x="1000" data-y="0">
+            <h1>Alexandre Gaigalas</h1>
+            <p>http://about.me/alganet</p>
+            
+            <h1>Augusto Pascutti</h1>
+            <p>http://about.me/augustohp</p>
+        </div>
+        
+        <div id="rest-conceito" class="step slide alert" data-x="2000" data-y="0">
+            !
+        </div>
+        
+        <div id="rest-pipe" class="step slide" data-x="3000" data-y="0">
+            <img src="img/magritte-pipe.jpg" width="100%" width="100%">
+        </div>
+        
+        <div id="rest-roy" class="step slide" data-x="4000" data-y="0">
+            <img src="img/roy-fielding.jpg" width="100%" height="100%">
+        </div>
+        
+        <div id="rest-arquitetura" class="step slide authors" data-x="5000" data-y="0">
+            <h1>Arquitetura</h1>
+            <p>
+                Como você organiza <strong id="rest-arquitetura-elementos" title="Dados, componente, conectores">elementos</strong>
+                de software para alcançar certos <strong id="rest-arquitetura-objectivos" title="Performance, escalabilidade, simplicidade, extensibilidade">objetivos</strong>.
+            </p>
+            
+            <h1 id="rets-arquitetura-rest" title="REST">Estilo Arquitetural</h1>
+            <p>Como você alcança certos objetivos com <strong>determinadas regras de organização</strong> dos elementos de software.</p>
+        </div>
+        
+        <div id="rest-interface" class="step slide" data-x="6000" data-y="0">
+            <h1>Interface Uniforme</h1>
+            
+            <ul>
+                <li id="rest-interface-uri" title="URI">Identificação de Recursos</li>
+                <li id="rest-interface-representacoes" title="HTML, JPG, etc...">Manipulação de representações</li>
+                <li id="rest-interface-mensagens" title="text/html, image/jpg">Mensagens auto-descritivas</li>
+                <li id="rest-interface-links" title="Links">Hipermídia</li>
+            </ul>
+        </div>
+    
+    <div id="conneg" class="step slide key" data-x="0" data-y="720">    
+        <h1>Negociação de Conteúdo</h1>
+    </div>  
+    
+    <div id="conneg-cachimbo" class="step slide" data-x="1000" data-y="720">
+        <h1>http://tabacaria.com/cachimbo</h1>
+        <ul>
+            <li title="Accept: image/jpeg">Imagem do cachimbo</li>
+            <li title="Accept: video/mpg">Vídeo do cachimbo</li>
+            <li title="Accept: text/plain">Texto do cachimbo</li>
+        </ul>
+    </div>
+    
+    <div id="conneg-cachimbo-jquery" class="step slide" data-x="2000" data-y="720">
+        <h1>Negociação de Mime Type</h1>
+<pre><code class="prettyprint">
+    $.ajax({
+        url: '/cachimbo',
+        headers: {
+            Accept: 'image/jpeg'
+        }
+    });
+</code></pre>
+    </div>
+    
+    <div id="conneg-cachimbo-jquery-video" class="step slide" data-x="3000" data-y="720">
+        <h1>Negociação de Mime Type</h1>
+<pre><code class="prettyprint">
+    $.ajax({
+        url: '/cachimbo',
+        headers: {
+            Accept: 'video/mpeg'
+        }
+    });
+</code></pre>
+    </div>
+    
+    <div id="conneg-cachimbo-jquery-range" class="step slide" data-x="4000" data-y="720">
+        <h1>Negociação de Range</h1>
+<pre><code class="prettyprint">
+    $.ajax({
+        url: '/cachimbo',
+        headers: {
+            Accept: 'video/mpeg',
+            Range: 'bytes=0-1024'
+        }
+    });
+</code></pre>
+    </div>
+    
+    
+    <div id="conneg-cachimbo-jquery-range3" class="step slide" data-x="5000" data-y="720">
+        <h1>Negociação de Range</h1>
+<pre><code class="prettyprint">
+    $.ajax({
+        url: '/cachimbo',
+        headers: {
+            Accept: 'video/mpeg',
+            Range: 'x-frames=50-100' //não-padrão!!!
+        }
+    });
+</code></pre>
+    </div>
+    
+    <div id="conneg-cachimbo-jquery-range4" class="step slide" data-x="6000" data-y="720">
+        <h1>Negociação de Range</h1>
+<pre><code class="prettyprint">
+    $.ajax({
+        url: '/cachimbo',
+        headers: {
+            Accept: 'image/gif',
+            Range: 'x-frames=50-100'
+        }
+    });
+</code></pre>
+    </div>
+    
+    <div id="conneg-cachimbo-jquery-range5" class="step slide" data-x="7000" data-y="720">
+        <h1>Múltipla Negociação</h1>
+<pre><code class="prettyprint">
+    $.ajax({
+        url: '/cachimbo',
+        headers: {
+            Accept: 'image/gif',
+            Accept-Language: 'en-US',
+            Accept-Encoding: 'gzip',
+            X-Accept-Profile: 'sRGB',
+            Range: 'x-frames=50-100;step=10'
+        }
+    });
+</code></pre>
+    </div>
+    
+    <div id="auth" class="step slide key" data-x="0" data-y="1440">
+        <h1>Autenticação</h1>
+    </div>
+    
+        <div id="auth-autorization" class="step slide key" data-x="1000" data-y="1440">
+            <h1>Autenticação != Autorização</h1>
+        </div>
+    
+        <div id="auth-porteiro" class="step slide" data-x="2000" data-y="1440">
+            <img src="img/porteiro.jpg" width="100%"/>
+        </div>
+        
+        <div id="auth-basic" class="step slide" data-x="3000" data-y="1440">
+            <h1>Http Basic</h1>
+<pre><code class="prettyprint">
+    $.ajax({
+        url: '/user/mickey',
+        username: 'mickey',
+        password: 'mouse'
+    });
+</code></pre>
+        </div>
+        
+        <div id="auth-digest" class="step slide" data-x="4000" data-y="1440">
+            <h1>Http Digest</h1>
+            
+            <ul>
+                <li> <a href="http://code.google.com/p/digestj/">DigestJ</a> <em>(abandoned)</em></li>
+            </ul>
+<pre><code class="prettyprint">
+    $(".signin_button").login();
+</code></pre>
+        </div>
+        
+        <div id="auth-cookie" class="step slide key" data-x="5000" data-y="1440">
+            <h1>Cookie</h1>
+        </div>
+        
+        <div id="auth-oauth" class="step slide" data-x="6000" data-y="1440">
+            <h1>OAuth</h1>
+            <ul>
+                    <li><a href="https://dev.twitter.com/docs/anywhere/">Twitter @Anywhere</a></li>
+                    <li><a href="http://oauth.googlecode.com/svn/code/javascript/">OAuth - Google Code</a></li>
+            </ul>
+        </div>
+    
+    <div id="cache" class="step slide key" data-x="0" data-y="2160">
+        <h1>Cache</h1>
+    </div>
+    
+    <div id="cache-concept" class="step slide key" data-x="1000" data-y="2160">
+        <h1>Não refaça o trabalho!</h1>
+    </div>
+    
+    <div id="cache-expires" class="step slide" data-x="2000" data-y="2160">
+        <h1>Tipos de Cache</h1>
+        <ul>
+            <li>Expiração</li>
+            <li>ETag</li>
+            <li>Última Modificação</li>
+        </ul>
+    </div>
+    
+    <div id="cache-jquery" class="step slide" data-x="3000" data-y="2160">
+
+<pre><code class="prettyprint">
+    $.ajax({
+        url: '/user/mickey'
+        cache: true,      //padrão true
+        ifModified: true  //padrão false
+    });
+</code></pre>
+        
+    </div>
+    
+    <div id="cache-advanced" class="step slide" data-x="4000" data-y="2160">
+
+<pre><code class="prettyprint">
+$.ajax({
+    url: '/user/mickey'
+    headers: {
+      'Cache-Control': 'max-age=600',
+      'ETag': myEtag,
+      'Last-Modified': 
+        'Wed, 15 Feb 2012 04:58:08 GMT'
+    }
+});
+</code></pre>
+        
+    </div>
+    
+    <div id="cache-vary" class="step slide" data-x="5000" data-y="2160">
+
+<pre><code class="prettyprint">
+$.ajax({
+    url: '/user/mickey'
+    headers: {
+      'Cache-Control': 'max-age=600',
+      'ETag': myEtag,
+      'Vary': 'X-Accept-Profile, Accept-Language'
+    }
+});
+</code></pre>
+        
+    </div>
+    
+    <div id="errors" class="step slide key" data-x="0" data-y="2880">
+        <h1>Tratamento de Erros</h1>
+    </div>
+    
+        <div id="errors-codes" class="step slide" data-x="1000" data-y="2880">
+            <h1>Códigos de Erro Comuns</h1>
+            <ul>
+                <li>401 Unauthorized</li>
+                <li>404 Not Found</li>
+                <li>405 Method Not Allowed</li>
+                <li>406 Not Acceptable</li>
+                <li>416 Requested Range Not Satisfiable</li>
+                <li>418 I'm a teapot (RFC 2324)</li>
+                <li>420 Enhance Your Calm (Twitter)</li>
+                <li>...</li>
+            </ul>
+        </div>
+    
+        <div id="errors-codes-custom" class="step slide" data-x="2000" data-y="2880">
+            <h1>Customização da Status Line</h1>
+            <ul>
+                <li>401 Senha Inválida</li>
+                <li>404 Ops!</li>
+                <li>405 Você não poe salvar esse documento</li>
+                <li>406 O formato que você pediu está indisponível</li>
+                <li>416 Quadro inexistente</li>
+                <li>418 Você precisa de um café</li>
+                <li>420 Limite de requisições atingido</li>
+                <li>...</li>
+            </ul>
+        </div>
+        
+        <div id="errors-jquery" class="step slide" data-x="3000" data-y="2880">
+<pre><code class="prettyprint">
+$.ajax({
+    url: '/user/mickey',
+    error: function(jqXHR, text, e) {
+        alert(textStatus);
+    },
+    sucess: function() {
+        alert('Ok!');
+    }
+});
+</code></pre>
+        </div>
+
+        <div id="errors-codes-headers" class="step slide" data-x="4000" data-y="2880">
+            <h1>Erros e Cabeçalhos</h1>
+            <ul>
+                <li>401 - Authorization</li>
+                <li>405 - Method</li>
+                <li>406 - Accept*</li>
+                <li>416 - Rage</li>
+                <li>...</li>
+            </ul>
+        </div>
+
+        <h1 id="questions" class="step" data-x="-2000" data-y="5000" data-z="-300" data-rotate-x="-15" data-rotate-z="20" data-rotate-y="0" data-scale="5">
+            Perguntas?
+        </h1>
+        <h1 id="thanks" class="step" data-x="-3000" data-y="10000" data-z="-800" data-rotate-x="-10" data-rotate-z="30" data-rotate-y="0" data-scale="10">
+            Obrigado!
+        </h1>
+
+<script src="js/prettify.js"></script>
+<script src="js/impress.js"></script>
+<script>
+prettyPrint();
+impress();
+</script>
+</body>
+</html>
