@@ -14,7 +14,11 @@
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+<<<<<<< HEAD
 a, abbr, acronym, address, big, cite,
+=======
+a, abbr, acronym, address, big, cite, code,
+>>>>>>> 6c72dab0f78e9ff0fcb9847268ec767c217b0cf6
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -60,7 +64,11 @@ table {
 
 
 body {
+<<<<<<< HEAD
     font-family: 'Ubuntu', 'Arial', sans-serif;
+=======
+    font-family: 'PT Sans', sans-serif;
+>>>>>>> 6c72dab0f78e9ff0fcb9847268ec767c217b0cf6
     
     min-height: 740px;
 
@@ -81,7 +89,12 @@ a {
     color: inherit;
     text-decoration: none;
     padding: 0 0.1em;
+<<<<<<< HEAD
     text-shadow: -1px -1px 2px rgba(100,100,100,0.3);
+=======
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+>>>>>>> 6c72dab0f78e9ff0fcb9847268ec767c217b0cf6
     border-radius: 0.2em;
     
     -webkit-transition: 0.5s;
@@ -98,6 +111,11 @@ a:hover {
 
 /* enable clicking on elements 'hiding' behind body in 3D */
 body     { pointer-events: none; }
+<<<<<<< HEAD
+=======
+
+a,iframe,
+>>>>>>> 6c72dab0f78e9ff0fcb9847268ec767c217b0cf6
 #impress { pointer-events: auto; }
 
 /* COMMON STEP STYLES */
@@ -112,7 +130,11 @@ body     { pointer-events: none; }
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
 
+<<<<<<< HEAD
     font-family: 'Ubuntu', sans-serif;
+=======
+    font-family: 'PT Serif', georgia, serif;
+>>>>>>> 6c72dab0f78e9ff0fcb9847268ec767c217b0cf6
 
     font-size: 48px;
     line-height: 1.5;
@@ -121,6 +143,7 @@ body     { pointer-events: none; }
 /* fade out inactive slides */
 
 .step {
+<<<<<<< HEAD
     -webkit-transition: opacity 0.7s;
     -moz-transition:    opacity 0.7s;
     -ms-transition:     opacity 0.7s;
@@ -130,6 +153,17 @@ body     { pointer-events: none; }
 
 .step:not(.active) {
     opacity: 0.1;
+=======
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.step:not(.active) {
+    opacity: 0.3;
+>>>>>>> 6c72dab0f78e9ff0fcb9847268ec767c217b0cf6
 }
 
 /* STEP SPECIFIC STYLES */
@@ -159,21 +193,37 @@ body     { pointer-events: none; }
     -o-transform:      translateY(400px);
     transform:         translateY(400px);
 
+<<<<<<< HEAD
     -webkit-transition: opacity 0.7s, -webkit-transform 0.5s 0.7s;
     -moz-transition:    opacity 0.7s,    -moz-transform 0.5s 0.7s;
     -ms-transition:     opacity 0.7s,     -ms-transform 0.5s 0.7s;
     -o-transition:      opacity 0.7s,      -o-transform 0.5s 0.7s;
     transition:         opacity 0.7s,         transform 0.5s 0.7s;
+=======
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+>>>>>>> 6c72dab0f78e9ff0fcb9847268ec767c217b0cf6
 }
 
 .impress-on-bored .hint {
     opacity: 1;
     
+<<<<<<< HEAD
     -webkit-transition: opacity 0.7s 5s, -webkit-transform 0.5s;
     -moz-transition:    opacity 0.7s 5s,    -moz-transform 0.5s;
     -ms-transition:     opacity 0.7s 5s,     -ms-transform 0.5s;
     -o-transition:      opacity 0.7s 5s,      -o-transform 0.5s;
     transition:         opacity 0.7s 5s,         transform 0.5s;
+=======
+    -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s;
+    -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s;
+    -ms-transition:     opacity 1s 5s,     -ms-transform 0.5s;
+    -o-transition:      opacity 1s 5s,      -o-transform 0.5s;
+    transition:         opacity 1s 5s,         transform 0.5s;
+>>>>>>> 6c72dab0f78e9ff0fcb9847268ec767c217b0cf6
     
     -webkit-transform: translateY(0px);
     -moz-transform:    translateY(0px);
@@ -315,7 +365,11 @@ body     { pointer-events: none; }
     padding-bottom: 300px;
     
     /* Yoda Icon :: Pixel Art from Star Wars http://www.pixeljoint.com/pixelart/1423.htm */
+<<<<<<< HEAD
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAMAAACwUBm+AAAAAXNSR0IArs4c6QAAAKtQTFRFsAAAvbWSLUUrLEQqY0.7s8UYJMqJ1vNTEgOiIdIzYhjIFVLhsXZ6lgSEIsP2U8JhcCVzMsSXZEgXdOO145XJdWOl03LzAYMk4vSXNExr+hwcuxRTs1Qmk+RW9Am49eFRANQz4pUoNMQWc+OSMDTz0wLBsCNVMxa2NBOyUDUoNNSnlEWo9VRGxAVzYFl6tXCggHbLNmMUIcHhwTXkk5f3VNRT8wUT8xAAAACQocRBWFFwAAAAF0Uk5TAEDm2GYAAAPCSURBVHja7d3JctNAFIZRMwRCCGEmzPM8z/D+T8bu/ptbXXJFdij5fMt2Wuo+2UgqxVmtttq5WVotLzBgwIABAwYMGDCn0qVqbo69psPqVpWx+1XG5iaavF8wYMCAAQMGDBgwi4DJ6Y6qkxB1HNlcN3a92gbR5P2CAQMGDBgwYMCAWSxMlrU+UY5yu2l9okfV4bAxUVbf7TJnAwMGDBgwYMCAAbMLMHeqbGR82Zy+VR1Ht81nVca6R+UdTLaU24Ruzd3qM/e4yjnAgAEDBgwYMGDA7AJMd1l/3NRdVGcj3eX/2WEhCmDGxnM7yqygu8XIPjJj8iN/MGDAgAEDBgwYMAuDGb8q0RGlLCHLv1t9qDKWn3vdNHVuEI6HPaxO9Jo3GDBgwIABAwYMmIXBdC9ShGgMk+XnkXUeuGcsP/e1+lhNnZsL/G5Vs3OAAQMGDBgwYMCAWSxMR3SzOmraG5atdy9wZKzb+vg16qyqe2FltbnAgAEDBgwYMGDALAxmTJSuN3WA76rnVca6GTnemGN1WoEBAwYMGDBgwIBZGMxUomy4+xO899V4LAg5Xnc2MGDAgAEDBgwYMGA218Wq+2K1LDqvY9xZu8zN8fICdM6btYABAwYMGDBgwIABMzfH0+pGU5afze2tXebmeAfVz+p8BQYMGDBgwIABAwbMPBzZ+oWmfJrln1273FhkbHzee9WWbw7AgAEDBgwYMGDALAKm43hcdctKgblcPamOhuXnXlY5Xs6bsW4FGyQCAwYMGDBgwIABswiYMceZKgvMo+h8mrHLTdn676rj+FEFoTtHd8MwOxEYMGDAgAEDBgyYRcBM5UhXqiymW3R3c9ARhWO/OmjqfjVZy+xEYMCAAQMGDBgwYBYG073OnCV0RFNhMhaOa9WfKmOB6XjHMN1tQmaAAQMGDBgwYMCA2VWY7vXjz1U4croAzgPztwIDBgwYMGDAgAEDZhswh035NBw59Dww3RgYMGDAgAEDBgwYMJuD6f4tXT7NUqfCdBvZLkxXdgQGDBgwYMCAAQNmt2DGj8WzwAfV/w7T/aq7mxwwYMCAAQMGDBgwuwqTOo7uTwTngflSzQ3TdaJvAwEDBgwYMGDAgAED5gSvgbyo5oHZ4Pc+gwEDBgwYMGDAgAEzhOm+5G0qTGaAAQMGDBgwYMCAAXNaMOcnls3tNwWm+zRzp54NDBgwYMCAAQMGDJh5YNL36k1TLuGvVq+qnKMbS5n7tulT9asCAwYMGDBgwIABA2ZumKuztLnjgQEDBgwYMGDAgNl5mH/4/ltKA6vBNAAAAABJRU5ErkJggg==);
+=======
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAMAAACwUBm+AAAAAXNSR0IArs4c6QAAAKtQTFRFsAAAvbWSLUUrLEQqY1s8UYJMqJ1vNTEgOiIdIzYhjIFVLhsXZ6lgSEIsP2U8JhcCVzMsSXZEgXdOO145XJdWOl03LzAYMk4vSXNExr+hwcuxRTs1Qmk+RW9Am49eFRANQz4pUoNMQWc+OSMDTz0wLBsCNVMxa2NBOyUDUoNNSnlEWo9VRGxAVzYFl6tXCggHbLNmMUIcHhwTXkk5f3VNRT8wUT8xAAAACQocRBWFFwAAAAF0Uk5TAEDm2GYAAAPCSURBVHja7d3JctNAFIZRMwRCCGEmzPM8z/D+T8bu/ptbXXJFdij5fMt2Wuo+2UgqxVmtttq5WVotLzBgwIABAwYMGDCn0qVqbo69psPqVpWx+1XG5iaavF8wYMCAAQMGDBgwi4DJ6Y6qkxB1HNlcN3a92gbR5P2CAQMGDBgwYMCAWSxMlrU+UY5yu2l9okfV4bAxUVbf7TJnAwMGDBgwYMCAAbMLMHeqbGR82Zy+VR1Ht81nVca6R+UdTLaU24Ruzd3qM/e4yjnAgAEDBgwYMGDA7AJMd1l/3NRdVGcj3eX/2WEhCmDGxnM7yqygu8XIPjJj8iN/MGDAgAEDBgwYMAuDGb8q0RGlLCHLv1t9qDKWn3vdNHVuEI6HPaxO9Jo3GDBgwIABAwYMmIXBdC9ShGgMk+XnkXUeuGcsP/e1+lhNnZsL/G5Vs3OAAQMGDBgwYMCAWSxMR3SzOmraG5atdy9wZKzb+vg16qyqe2FltbnAgAEDBgwYMGDALAxmTJSuN3WA76rnVca6GTnemGN1WoEBAwYMGDBgwIBZGMxUomy4+xO899V4LAg5Xnc2MGDAgAEDBgwYMGA218Wq+2K1LDqvY9xZu8zN8fICdM6btYABAwYMGDBgwIABMzfH0+pGU5afze2tXebmeAfVz+p8BQYMGDBgwIABAwbMPBzZ+oWmfJrln1273FhkbHzee9WWbw7AgAEDBgwYMGDALAKm43hcdctKgblcPamOhuXnXlY5Xs6bsW4FGyQCAwYMGDBgwIABswiYMceZKgvMo+h8mrHLTdn676rj+FEFoTtHd8MwOxEYMGDAgAEDBgyYRcBM5UhXqiymW3R3c9ARhWO/OmjqfjVZy+xEYMCAAQMGDBgwYBYG073OnCV0RFNhMhaOa9WfKmOB6XjHMN1tQmaAAQMGDBgwYMCA2VWY7vXjz1U4croAzgPztwIDBgwYMGDAgAEDZhswh035NBw59Dww3RgYMGDAgAEDBgwYMJuD6f4tXT7NUqfCdBvZLkxXdgQGDBgwYMCAAQNmt2DGj8WzwAfV/w7T/aq7mxwwYMCAAQMGDBgwuwqTOo7uTwTngflSzQ3TdaJvAwEDBgwYMGDAgAED5gSvgbyo5oHZ4Pc+gwEDBgwYMGDAgAEzhOm+5G0qTGaAAQMGDBgwYMCAAXNaMOcnls3tNwWm+zRzp54NDBgwYMCAAQMGDJh5YNL36k1TLuGvVq+qnKMbS5n7tulT9asCAwYMGDBgwIABA2ZumKuztLnjgQEDBgwYMGDAgNl5mH/4/ltKA6vBNAAAAABJRU5ErkJggg==);
+>>>>>>> 6c72dab0f78e9ff0fcb9847268ec767c217b0cf6
     background-position: bottom right;
     background-repeat: no-repeat;
 }
@@ -408,11 +462,19 @@ body     { pointer-events: none; }
     -o-transform:      translateZ(0px);
     transform:         translateZ(0px);
     
+<<<<<<< HEAD
     -webkit-transition-delay: 0.7s;
     -moz-transition-delay:    0.7s;
     -ms-transition-delay:     0.7s;
     -o-transition-delay:      0.7s;
     transition-delay:         0.7s;
+=======
+    -webkit-transition-delay: 1s;
+    -moz-transition-delay:    1s;
+    -ms-transition-delay:     1s;
+    -o-transition-delay:      1s;
+    transition-delay:         1s;
+>>>>>>> 6c72dab0f78e9ff0fcb9847268ec767c217b0cf6
 }
 
 /* overview step */
@@ -445,11 +507,22 @@ body     { pointer-events: none; }
 
     padding: 40px 60px;
 
+<<<<<<< HEAD
     background-color: white;
 
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
 
     font-family: 'Ubuntu', Arial, sans-serif;
+=======
+    border-radius: 10px;
+
+    background-color: white;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .3);
+
+    font-family: 'Open Sans', Arial, sans-serif;
+>>>>>>> 6c72dab0f78e9ff0fcb9847268ec767c217b0cf6
 
     color: rgb(102, 102, 102);
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
